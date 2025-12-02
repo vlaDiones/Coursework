@@ -32,12 +32,18 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /*----------------------------Modal-Window-----------------------------------*/
-const open_modal_window = document.getElementById('open-modal-window');
-const modal = document.getElementById('contact-modal');
-const close_modal_screen = modal.querySelector('.modal-close');
-const overlay = modal.querySelector('.modal-overlay');
-
 document.addEventListener("DOMContentLoaded", () => {
+
+    const open_modal_window = document.getElementById('open-modal-window');
+    const modal = document.getElementById('contact-modal');
+
+    if (!open_modal_window || !modal) {
+        return;
+    }
+
+    // Ці рядки виконуються ТІЛЬКИ якщо modal існує
+    const close_modal_screen = modal.querySelector('.modal-close');
+    const overlay = modal.querySelector('.modal-overlay');
 
     const open_modal = (event) => {
         event.preventDefault(); 
@@ -50,14 +56,17 @@ document.addEventListener("DOMContentLoaded", () => {
         document.body.style.overflow = ''; 
     };
 
-    
-    if (open_modal_window && modal) {
-        open_modal_window.addEventListener('click', open_modal);
+    open_modal_window.addEventListener('click', open_modal);
+
+    if (close_modal_screen) {
         close_modal_screen.addEventListener('click', close_modal);
+    }
+
+    if (overlay) {
         overlay.addEventListener('click', close_modal);        
-        }
+    }
 });
-/*----------------------------Modal-Window-----------------------------------*/
+/*----------------------------Scroll-Header-----------------------------------*/
 document.addEventListener("DOMContentLoaded", () => {
     
     const header = document.getElementById('main-header');
@@ -92,22 +101,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }    
 });
 /*-------------------------------Swiper-------------------------------*/
-const swiper = new Swiper('.myNewsSwiper', {
+document.addEventListener('DOMContentLoaded', function () {
     
-    loop: false, 
-    spaceBetween: 0,
-    
-    
-    pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-        renderBullet: function (index, className) {
-            return '<div class="' + className + '">' + (index < 9 ? '0' : '') + (index + 1) + '</div>';
+    const swiper = new Swiper('.myNewsSwiper', {
+        loop: true,
+        spaceBetween: 30,
+        slidesPerView: 1, 
+        
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index < 9 ? '0' : '') + (index + 1) + '</span>';
+            },
         },
-    },
 
-    navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-    },
+        navigation: {
+            nextEl: '.custom-next',
+            prevEl: '.custom-prev',
+        },
+    });
 });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
         <link rel="stylesheet" href="assets/styles/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    </head>
+        </head>
     <body>
 		<div id="svg-sprite" class="d-none"></div>
 		<section class="header-section">
@@ -58,7 +58,7 @@
                                
                 <h2 class="header-post">Останній пост</h2>
                 <div class="latest-post">
-                    <img src="/assets/img/interior/blog_interior.webp" alt="">
+                    <img src="assets/img/interior/blog_interior.webp" alt="">
                     <div>
                         <h4>Недорогі новітні ідеї дизайну інтер'єру.</h4>
                         <p class="text-large">
@@ -405,15 +405,9 @@
                             </div>
                         </div>
                         <div class="swiper-controls">
-                            <div class="swiper-button-prev swiper-btn left-btn">
-                                <svg class="arrowhead-icon">
-                                	<use href="#icon_arrowhead"></use>
-                                </svg>
-                            </div>
+                            <div class="custom-prev">&#10094;</div>
                             <div class="swiper-pagination"></div>
-                            <div class="swiper-button-next swiper-btn">
-                                <svg class="arrowhead-icon"><use href="#icon_arrowhead"></use></svg>
-                            </div>
+                            <div class="custom-next">&#10095;</div>
                         </div>
                     </div>
                 </div>
@@ -492,7 +486,7 @@
         </section>
     	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
         <script src="./assets/JS/sprite-loader.js"></script>
-        <script src="./assets/JS/scripts.js"></script>
+        <script src="./assets/JS/scripts.js" defer></script>
 	</body>
 </html>
 
