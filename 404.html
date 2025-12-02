@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>404-page</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+        <link rel="stylesheet" href="assets/styles/style.css">
+    </head>
+    <body>
+		<div id="svg-sprite" class="d-none"></div>
+		<section class="header-section">
+        	<header>
+    			<div class="header-wrap" id="main-header">
+                    <div class="logo">
+                      <a href="index.html">
+                        <svg class="logo-icon">
+                            <use href="#icon_logo"></use>
+                        </svg>
+                        Interno
+                      </a>
+                    </div>
+                    <div id="burgerMenu" class="burgerMenu">
+                          <i id="open-icon" class="fa-solid fa-bars"></i>
+                          <i id="close-icon" class="fa-solid fa-xmark d-none"></i>
+                    </div>
+                    <nav id="header-nav" class="header-nav">
+                        <ul class="main-menu text-medium">
+                            <li><a href="index.html">Головна сторінка</a></li>
+                            <li><a href="others.html">Інші сторінки</a></li>
+                            <li><a href="services.html">Сервіси</a></li>
+                            <li><a href="project.html">Проекти</a></li>
+                            <li><a href="blog.html">Блог</a></li>
+                            <li><a href="contact.html">Контакти</a></li>
+                            <li>
+                                <div class="search">
+                                    <svg>
+                                        <use href="#icon_search"></use>
+                                    </svg>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+        	</header>
+            
+		</section>
+		<section class="section404">
+			<div class="div404">				
+                <h1 class="header404">404</h1>
+                <p class="text-extra-large">Вибачте за незручності, але бажана сторінка не знайдена</p>
+                <a  href="index.html" class="button">
+                    <div class="button-wrap">
+                        <span class="text-small">Головна ст.</span>
+                        <svg class="arrow-icon">
+                            <use href="#icon_arrow"></use>
+                        </svg>
+                    </div>   
+                </a>
+			</div>
+			<img src="./assets/img/404.webp" alt="">
+		</section>
+		
+        <script src="./assets/JS/sprite-loader.js"></script>
+        <script src="./assets/JS/scripts.js"></script>
+	</body>
+</html>
+
+
